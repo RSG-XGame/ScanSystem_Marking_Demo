@@ -1,14 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ScaSystems.Marking.DAL.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace ScaSystems.Marking.DAL
 {
     public class ScanSystemsContext : DbContext
     {
         private string databasePath;
+
+        public DbSet<DMCode> DMCodes {get;set;}
+        public DbSet<DMCodeState> DMCodeStates {get;set;}
+        public DbSet<Product> Products {get;set;}
+        public DbSet<RegisterCode> RegisterCodes {get;set;}
+        public DbSet<User> Users { get;set;}
+        public DbSet<CodeType> CodeTypes { get; set; }
 
         public ScanSystemsContext()
         {
@@ -22,18 +28,40 @@ namespace ScaSystems.Marking.DAL
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /*User user = new User { UserId = Guid.NewGuid(), Login = "admin", Password = "admin" };
+            DMCodeState dmStateFree = new DMCodeState { Id = 1, Name = "Свободный" };
+            DMCodeState dmStateProduct = new DMCodeState { Id = 2, Name = "Связан с товаром" };
+            DMCodeState dmStateBox = new DMCodeState { Id = 3, Name = "Связан с коробкой" };
+            DMCodeState dmStatePallet = new DMCodeState { Id = 4, Name = "Связан с паллетой" };
+            DMCodeState dmStateDefected = new DMCodeState { Id = 5, Name = "Бракованный" };
 
-            CodeType item = new CodeType { CodeTypeId = 1, CodeTypeName = "Продукт" };
-            CodeType box = new CodeType { CodeTypeId = 2, CodeTypeName = "Коробка" };
-            CodeType pallet = new CodeType { CodeTypeId = 3, CodeTypeName = "Паллета" };
+            DMCode[] dmCodes = new DMCode[100];
+            for (int i = 0; i < dmCodes.Length; ++i)
+            {
+                dmCodes[i] = new DMCode { Id = Guid.NewGuid(), DataMatrix = (i + 1).ToString().PadLeft(10, '0'), DMCodeStateId = 1 };
+            }
 
-            CodeTypeDimention itemInBox = new CodeTypeDimention { CodeTypeDimentionId = Guid.NewGuid(), ParentCodeTypeId = 2, ChildrenCodeTypeId = 1, MaxCountChildrens = 4 };
-            CodeTypeDimention boxInPallet = new CodeTypeDimention { CodeTypeDimentionId = Guid.NewGuid(), ParentCodeTypeId = 3, ChildrenCodeTypeId = 2, MaxCountChildrens = 2 };
+            Product product1 = new Product { Id = Guid.NewGuid(), Barcode = "978020137962", Name = "Кока-кола" };
+            Product product2 = new Product { Id = Guid.NewGuid(), Barcode = "460123456789", Name = "Сникерс" };
 
+            User user = new User { Id = Guid.NewGuid(), Password = "admin", Login = "admin", Name = "Администратор", LastSignIn = DateTime.Now, DeviceSerialNumber = "" };
+
+            CodeType product = new CodeType { Id = 1, Name = "Продукт" };
+            CodeType productInBox = new CodeType { Id = 2, Name = "Продукт в коробке" };
+            CodeType boxOnPallet = new CodeType { Id = 3, Name = "Коробка на паллете" };
+            CodeType productOnPallet = new CodeType { Id = 4, Name = "Продукт на паллете" };
+
+            modelBuilder.Entity<DMCodeState>().HasData(dmStateFree, dmStateProduct, dmStateBox, dmStatePallet, dmStateDefected);
+            modelBuilder.Entity<DMCode>().HasData(dmCodes);
+            modelBuilder.Entity<Product>().HasData(product1, product2);
             modelBuilder.Entity<User>().HasData(user);
-            modelBuilder.Entity<CodeType>().HasData(item, box, pallet);
-            modelBuilder.Entity<CodeTypeDimention>().HasData(itemInBox, boxInPallet);*/
+            modelBuilder.Entity<CodeType>().HasData(product, productInBox, productOnPallet, boxOnPallet);
+
+            modelBuilder.Entity<DMCode>().Property(x => x.Id).IsRequired().HasDefaultValue("randomblob(16)");
+            modelBuilder.Entity<DMCodeState>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Product>().Property(x => x.Id).IsRequired().HasDefaultValue("randomblob(16)");
+            modelBuilder.Entity<RegisterCode>().Property(x => x.Id).IsRequired().HasDefaultValue("randomblob(16)");
+            modelBuilder.Entity<User>().Property(x => x.Id).IsRequired().HasDefaultValue("randomblob(16)");
+            modelBuilder.Entity<CodeType>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
 
             base.OnModelCreating(modelBuilder);
 

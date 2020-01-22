@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ScaSystems.Marking.DAL.Models
+{
+    public class DMCode : ModelBase<Guid>
+    {
+        public string DataMatrix { get; set; }
+        public int DMCodeStateId { get; set; }
+
+        public DMCodeState DMCodeState { get; set; }
+    }
+}
