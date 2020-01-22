@@ -3,3 +3,9 @@
 ################################################################################
 
 /ScanSystems.Marking.Demo/ScanSystems.Marking.Demo/obj
+/ScanSystems.Marking.Demo/ScanSystems.Marking.Demo/bin/Debug/netstandard2.0
+/ScanSystems.Logic/obj
+/ScanSystems.Marking.Demo/ScanSystems.Marking.Demo.Android/obj
+/ScanSystems.Marking.Demo/ScanSystems.Marking.Demo.Android/bin/Debug
+/ScaSystems.Marking.DAL/obj
+/.vs/ScanSystems.Marking.Demo/v16/Server/sqlite3
