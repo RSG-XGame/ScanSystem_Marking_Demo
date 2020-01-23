@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Marking.DAL", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Logic", "ScanSystems.Logic\ScanSystems.Logic.csproj", "{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{67B1D5A4-194F-4270-8118-9204CAB4B3A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{67B1D5A4-194F-4270-8118-9204CAB4B3A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestZipper", "TestZipper", "{485D1A27-5963-4B91-B94A-98246DA69C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystems.Zipper", "ScanSystems.Zipper\ScanSystems.Zipper.csproj", "{3863ED9A-6A1E-401F-94AC-A9738E01149D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +47,16 @@ Global
 		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3863ED9A-6A1E-401F-94AC-A9738E01149D} = {485D1A27-5963-4B91-B94A-98246DA69C30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EE78AC6-B16C-41D5-8772-D490691B36D2}
