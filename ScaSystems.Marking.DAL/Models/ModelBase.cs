@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ScaSystems.Marking.DAL.Models
+namespace ScanSystems.Marking.DAL.Models
 {
     public abstract class ModelBase<T>
     {

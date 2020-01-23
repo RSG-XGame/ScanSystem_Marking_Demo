@@ -17,6 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ScanSystems.Logic\ScanSystems.Logic.csproj" />
-    <ProjectReference Include="..\..\ScaSystems.Marking.DAL\ScaSystems.Marking.DAL.csproj" />
+    <ProjectReference Include="..\..\ScaSystems.Marking.DAL\ScanSystems.Marking.DAL.csproj" />
   </ItemGroup>
 </Project>

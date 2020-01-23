@@ -1,7 +1,8 @@
-﻿using ScaSystems.Marking.DAL;
-using ScaSystems.Marking.DAL.Models;
+﻿using ScanSystems.Marking.DAL;
+using ScanSystems.Marking.DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ScanSystems.Logic
@@ -10,6 +11,8 @@ namespace ScanSystems.Logic
 
     public class ScanRegister
     {
+        private CodeType baseCodeType;
+
         public ScanRegister()
         {
 
@@ -17,6 +20,10 @@ namespace ScanSystems.Logic
 
         public void Initialize(CodeType baseCodeType)
         {
+            this.baseCodeType = baseCodeType;
+            using (ScanSystemsContext db = new ScanSystemsContext())
+            {
+            }
         }
     }
 }

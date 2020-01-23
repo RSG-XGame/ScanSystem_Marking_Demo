@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystems.Marking.Demo.Android", "ScanSystems.Marking.Demo\ScanSystems.Marking.Demo.Android\ScanSystems.Marking.Demo.Android.csproj", "{31C63C3E-3547-4666-ABB6-9E0DCFA61411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystems.Marking.Demo", "ScanSystems.Marking.Demo\ScanSystems.Marking.Demo\ScanSystems.Marking.Demo.csproj", "{E1CE3EBA-C821-4AD1-98D8-C0756D984078}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Marking.Demo", "ScanSystems.Marking.Demo\ScanSystems.Marking.Demo\ScanSystems.Marking.Demo.csproj", "{E1CE3EBA-C821-4AD1-98D8-C0756D984078}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaSystems.Marking.DAL", "ScaSystems.Marking.DAL\ScaSystems.Marking.DAL.csproj", "{382241CF-D2BA-4214-8191-92D8C785EBEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Marking.DAL", "ScaSystems.Marking.DAL\ScanSystems.Marking.DAL.csproj", "{382241CF-D2BA-4214-8191-92D8C785EBEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystems.Logic", "ScanSystems.Logic\ScanSystems.Logic.csproj", "{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Logic", "ScanSystems.Logic\ScanSystems.Logic.csproj", "{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{67B1D5A4-194F-4270-8118-9204CAB4B3A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B07E3FBA-FF02-4936-A19F-B7FB2B4AB504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B1D5A4-194F-4270-8118-9204CAB4B3A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
