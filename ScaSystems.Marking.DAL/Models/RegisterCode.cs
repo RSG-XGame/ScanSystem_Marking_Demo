@@ -6,7 +6,7 @@ namespace ScanSystems.Marking.DAL.Models
 {
     public class RegisterCode : ModelBase<Guid>
     {
-        public Guid ChildrenCode { get; set; }
+        public Guid CurrentCode { get; set; }
         public Guid ParentCode { get; set; }
         public int CodeTypeId { get; set; }
 

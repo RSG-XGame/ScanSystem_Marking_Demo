@@ -11,3 +11,8 @@
 /.vs/ScanSystems.Marking.Demo/v16/Server/sqlite3
 /ConsoleApp1/bin/Debug/netcoreapp3.1
 /ConsoleApp1/obj
+/ScanSystems.Logic/bin/Debug/netstandard2.0
+/ScanSystems.Zipper/bin/Debug/netstandard2.0
+/ScanSystems.Zipper/obj/Debug/netstandard2.0/ScanSystems.Zipper.csproj.FileListAbsolute.txt
+/ScanSystems.Zipper/obj/Debug/netstandard2.0/ScanSystems.Zipper.pdb
+/ScanSystems.Zipper/obj/Debug/netstandard2.0/ScanSystems.Zipper.dll

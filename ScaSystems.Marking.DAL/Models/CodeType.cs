@@ -9,7 +9,9 @@ namespace ScanSystems.Marking.DAL.Models
         public string Name { get; set; }
         public int? ChildrenCodeTypeId { get; set; }
         public int MaxCountChildrens { get; set; }
+        public int DMCodeStateId { get; set; }
 
+        public DMCodeState DMCodeState { get; set; }
         public CodeType ChildrenCodeType { get; set; }
 
         public List<RegisterCode> RegisterCodes { get; set; }

@@ -8,7 +8,9 @@ namespace ScanSystems.Marking.DAL.Models
     {
         public string DataMatrix { get; set; }
         public int DMCodeStateId { get; set; }
+        public Guid? ProductId { get; set; }
 
+        public Product Product { get; set; }
         public DMCodeState DMCodeState { get; set; }
     }
 }

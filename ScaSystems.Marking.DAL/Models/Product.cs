@@ -8,5 +8,7 @@ namespace ScanSystems.Marking.DAL.Models
     {
         public string Name { get; set; }
         public string Barcode { get; set; }
+
+        public List<DMCode> DMCodes { get; set; }
     }
 }
