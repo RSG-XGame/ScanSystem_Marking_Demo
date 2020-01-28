@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ScanSystems.Logic\ScanSystems.Logic.csproj" />
     <ProjectReference Include="..\ScaSystems.Marking.DAL\ScanSystems.Marking.DAL.csproj" />
   </ItemGroup>
 

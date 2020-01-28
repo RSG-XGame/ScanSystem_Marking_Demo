@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScanSystems.Marking.DAL;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace ScanSystems.Marking.Demo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage() { BindingContext =  };
         }
 
         protected override void OnStart()

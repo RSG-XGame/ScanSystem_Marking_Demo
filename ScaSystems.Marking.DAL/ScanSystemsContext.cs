@@ -18,7 +18,7 @@ namespace ScanSystems.Marking.DAL
 
         public ScanSystemsContext()
         {
-            databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ScanSystemsDemo.db"); ;
+            databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ScanSystemsDemo.db");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

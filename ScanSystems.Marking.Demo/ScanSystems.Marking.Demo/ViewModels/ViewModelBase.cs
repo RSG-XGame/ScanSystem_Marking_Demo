@@ -10,7 +10,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
-        private const bool animated = true;
+        protected const bool animated = true;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -23,6 +23,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
         public ViewModelBase()
         {
             InitializeCommands();
+            Initialization();
         }
 
         private void InitializeCommands()
@@ -55,6 +56,11 @@ namespace ScanSystems.Marking.Demo.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             return result;
+        }
+
+        protected virtual void Initialization()
+        {
+
         }
     }
 }

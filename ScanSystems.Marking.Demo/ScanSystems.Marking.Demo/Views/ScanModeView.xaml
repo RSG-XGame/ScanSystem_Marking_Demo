@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ScanSystems.Marking.Demo.Views.ScanModeView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+
+                <Label VerticalOptions="Start" Text="Установите параметры работы" Grid.Row="0" />
+                <Picker VerticalOptions="Start" SelectedItem="" ItemsSource="" Grid.Row="1" />
+
+                <ListView Grid.Row="2" VerticalOptions="Fill">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Test" Grid.Column="0" />
+                                    <Switch Grid.Column="1" />
+                                </Grid>
+                            </StackLayout>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Text="Начать" Grid.Row="3" />
+                <Button Text="Назад" Grid.Row="4" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
