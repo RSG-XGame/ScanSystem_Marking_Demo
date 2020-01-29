@@ -9,7 +9,7 @@
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="15" />
+                    <RowDefinition Height="25" />
                     <RowDefinition />
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="55" />
@@ -17,18 +17,13 @@
                 </Grid.RowDefinitions>
 
                 <Label VerticalOptions="Start" Text="Установите параметры работы" Grid.Row="0" />
-                <Picker VerticalOptions="Start" SelectedItem="" ItemsSource="" Grid.Row="1" />
+                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="MainCodeTypes" VerticalOptions="Start" Grid.Row="1" />
 
-                <ListView Grid.Row="2" VerticalOptions="Fill">
+                <ListView ItemsSource="{Binding OptionalCodeTypes}" Grid.Row="2" VerticalOptions="Fill">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
                                 <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions>
-
                                     <Label Text="Test" Grid.Column="0" />
                                     <Switch Grid.Column="1" />
                                 </Grid>
@@ -36,9 +31,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
-                <Button Text="Начать" Grid.Row="3" />
-                <Button Text="Назад" Grid.Row="4" />
+                
+                <Button Text="Начать" Grid.Row="3" Command="{Binding ScanCommand}" />
+                <Button Text="Назад" Grid.Row="4" Command="{Binding BackCommand}" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

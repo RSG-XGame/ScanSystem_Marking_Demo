@@ -1,4 +1,6 @@
 ﻿using ScanSystems.Marking.DAL;
+using ScanSystems.Marking.Demo.ViewModels;
+using ScanSystems.Marking.Demo.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,7 +13,11 @@ namespace ScanSystems.Marking.Demo
         {
             InitializeComponent();
 
-            MainPage = new MainPage() { BindingContext =  };
+            BannerView mainView = new BannerView();
+            MainViewModel viewModel = new MainViewModel { Navigation = mainView.Navigation };
+            mainView.BindingContext = viewModel;
+
+            MainPage = mainView;
         }
 
         protected override void OnStart()

@@ -45,10 +45,10 @@ namespace ScanSystems.Marking.DAL
 
             User user = new User { Id = Guid.NewGuid(), Password = "admin", Login = "admin", Name = "Администратор", LastSignIn = DateTime.Now, DeviceSerialNumber = "" };
 
-            CodeType product = new CodeType { Id = 1, Name = "Продукт", ChildrenCodeTypeId = null, MaxCountChildrens = 0, DMCodeStateId = 2 };
-            CodeType productInBox = new CodeType { Id = 2, Name = "Продукт в коробке", ChildrenCodeTypeId = 1, MaxCountChildrens = 3, DMCodeStateId = 3 };
-            CodeType boxOnPallet = new CodeType { Id = 3, Name = "Коробка на паллете", ChildrenCodeTypeId = 2, MaxCountChildrens = 2, DMCodeStateId = 4 };
-            CodeType productOnPallet = new CodeType { Id = 4, Name = "Продукт на паллете", ChildrenCodeTypeId = 1, MaxCountChildrens = 4, DMCodeStateId = 4 };
+            CodeType product = new CodeType { Id = 1, Name = "Продукт", ChildrenCodeTypeId = null, MaxCountChildrens = 0, DMCodeStateId = 2, MapCode = "[1]", Selectable = true };
+            CodeType productInBox = new CodeType { Id = 2, Name = "Продукт в коробке", ChildrenCodeTypeId = 1, MaxCountChildrens = 3, DMCodeStateId = 3, MapCode = "[1][2];[2]", Selectable = true };
+            CodeType boxOnPallet = new CodeType { Id = 3, Name = "Коробка на паллете", ChildrenCodeTypeId = 2, MaxCountChildrens = 2, DMCodeStateId = 4, MapCode = "[1][2][4];[2][3];[3]", Selectable = true };
+            CodeType productOnPallet = new CodeType { Id = 4, Name = "Продукт на паллете", ChildrenCodeTypeId = 1, MaxCountChildrens = 4, DMCodeStateId = 4, MapCode = "[1][4];[4]", Selectable = false };
 
             modelBuilder.Entity<DMCodeState>().HasData(dmStateFree, dmStateProduct, dmStateBox, dmStatePallet, dmStateDefected);
             modelBuilder.Entity<DMCode>().HasData(dmCodes);
@@ -57,9 +57,12 @@ namespace ScanSystems.Marking.DAL
             modelBuilder.Entity<CodeType>().HasData(product, productInBox, productOnPallet, boxOnPallet);
 
             modelBuilder.Entity<DMCode>().Property(x => x.Id).IsRequired().HasColumnType("blob");
+            modelBuilder.Entity<DMCode>().Property(x => x.ProductId).HasColumnType("blob");
             modelBuilder.Entity<DMCodeState>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
             modelBuilder.Entity<Product>().Property(x => x.Id).IsRequired().HasColumnType("blob");
             modelBuilder.Entity<RegisterCode>().Property(x => x.Id).IsRequired().HasColumnType("blob");
+            modelBuilder.Entity<RegisterCode>().Property(x => x.CurrentCode).HasColumnType("blob");
+            modelBuilder.Entity<RegisterCode>().Property(x => x.ParentCode).HasColumnType("blob");
             modelBuilder.Entity<User>().Property(x => x.Id).IsRequired().HasColumnType("blob");
             modelBuilder.Entity<CodeType>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
 

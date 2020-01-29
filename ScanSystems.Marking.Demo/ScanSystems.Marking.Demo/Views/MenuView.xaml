@@ -6,10 +6,41 @@
              mc:Ignorable="d"
              x:Class="ScanSystems.Marking.Demo.Views.MenuView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <RelativeLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+            <Image Source="C:\Users\Valitov.GM\Downloads\Bardcode_Scanner.png" 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.15}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.1}"/>
+            <StackLayout 
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.5,
+                        Constant=-85}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width}">
+                <Button Text="Сканировать" Command="{Binding ScanModeCommand}" />
+                <Button Text="Данные" Command="{Binding DataCommand}" />
+                <Button Text="Настройки" Command="{Binding SettingsCommand}" />
+            </StackLayout>
+            <Button Text="Выход" Command="{Binding SignOutCommand}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=1,
+                        Constant=-50}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width}"/>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -41,12 +41,19 @@ namespace ScanSystems.Marking.Demo.ViewModels
         {
             Navigation.PopToRootAsync(animated);
         }
+        protected void ShowMessage(string title, string message)
+        {
+            string accept = "ОК";
+            string cancel = string.Empty;
+
+            Navigation.NavigationStack[Navigation.NavigationStack.Count - 1].DisplayAlert(title, message, accept, cancel);
+        }
         protected void CloseModal()
         {
             Navigation.PopModalAsync(animated);
         }
 
-        protected bool SetProperty<T>(ref T source, T value, [CallerMemberName] string propertyName = "")
+        protected bool SetProperty<T>(ref T source, T value, [CallerMemberName] string propertyName = "", Action<T> postAction = null)
         {
             bool result = false;
             if (!EqualityComparer<T>.Default.Equals(source, value))
@@ -54,6 +61,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
                 source = value;
                 result = true;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                postAction?.Invoke(source);
             }
             return result;
         }

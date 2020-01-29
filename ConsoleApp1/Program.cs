@@ -9,6 +9,33 @@ namespace ConsoleApp1
 {
     class Program
     {
+        private abstract class F1
+        {
+            protected int? val1 { get; private set; }
+
+            public F1()
+            {
+                Init();
+            }
+
+            protected virtual void Init()
+            {
+                val1 = 1;
+            }
+        }
+
+        private class F2 : F1
+        {
+            protected int? val2 { get; private set; }
+
+            protected override void Init()
+            {
+                val2 = 2;
+
+                base.Init();
+            }
+        }
+
         static void Main(string[] args)
         {
             string[] codes = GetCodes();

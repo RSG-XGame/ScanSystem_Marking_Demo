@@ -21,11 +21,11 @@ namespace ScanSystems.Logic.Controllers
             models = new List<RegistratorModel>();
         }
 
-        public void Initialize(CodeType baseCodeType, Product product)
+        public void Initialize(CodeType[] baseCodeType, Product product)
         {
             using (ScanSystemsContext db = new ScanSystemsContext())
             {
-                models.AddRange(InitializeModels(db.CodeTypes.ToList(), baseCodeType.Id));
+                models.AddRange(InitializeModels(db.CodeTypes.ToList()));
                 models.ForEach(x => x.FullPackage += FullPackage);
                 child = models.First(x => x.Child == null);
                 this.product = product;
@@ -62,35 +62,16 @@ namespace ScanSystems.Logic.Controllers
                     }
                 }
             }
-            //if (registratorModel.Parent == null)
-            //{
-            //    registratorModel.Codes.Clear();
-            //    CurrentRegistratorModel = child;
-            //}
-            //else
-            //{
-            //    if (registratorModel.Parent != null)
-            //    {
-            //        CurrentRegistratorModel = registratorModel.Parent;
-            //    }
-            //}
         }
 
-        private IEnumerable<RegistratorModel> InitializeModels(IEnumerable<CodeType> codeTypes, int id)
+        private IEnumerable<RegistratorModel> InitializeModels(IEnumerable<CodeType> codeTypes)
         {
-            int cId = id;
-            while (cId != -1)
+            if (baseRegistratorModel == null)
             {
-                var codeType = codeTypes.FirstOrDefault(x => x.Id == cId);
-
-                if (codeType != null)
-                {
-                    if (baseRegistratorModel == null)
-                    {
-                        baseRegistratorModel = new RegistratorModel();
-                    }
-                    cId = codeType.ChildrenCodeTypeId.HasValue ? codeType.ChildrenCodeTypeId.Value : -1;
-                }
+                baseRegistratorModel = new RegistratorModel();
+            }
+            foreach (var codeType in codeTypes)
+            {
                 yield return baseRegistratorModel.Initizlie(codeType);
             }
         }
