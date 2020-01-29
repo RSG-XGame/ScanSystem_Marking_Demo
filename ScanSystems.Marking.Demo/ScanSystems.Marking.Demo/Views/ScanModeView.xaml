@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:ScanSystems.Marking.Demo.Models"
              mc:Ignorable="d"
              x:Class="ScanSystems.Marking.Demo.Views.ScanModeView">
     <ContentPage.Content>
@@ -17,15 +18,15 @@
                 </Grid.RowDefinitions>
 
                 <Label VerticalOptions="Start" Text="Установите параметры работы" Grid.Row="0" />
-                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="MainCodeTypes" VerticalOptions="Start" Grid.Row="1" />
+                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="{Binding MainCodeTypes}" VerticalOptions="Start" Grid.Row="1" />
 
                 <ListView ItemsSource="{Binding OptionalCodeTypes}" Grid.Row="2" VerticalOptions="Fill">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="models:ScanModeModel">
                             <StackLayout>
                                 <Grid>
-                                    <Label Text="Test" Grid.Column="0" />
-                                    <Switch Grid.Column="1" />
+                                    <Label Text="{Binding Name}" Grid.Column="0" />
+                                    <Switch IsToggled="{Binding Selected}" Grid.Column="1" />
                                 </Grid>
                             </StackLayout>
                         </DataTemplate>

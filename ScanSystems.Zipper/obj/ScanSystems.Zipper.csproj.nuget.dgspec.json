@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Valitov.GM\\source\\repos\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj": {}
+    "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Valitov.GM\\source\\repos\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj": {
+    "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Valitov.GM\\source\\repos\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+        "projectUniqueName": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
         "projectName": "ScanSystems.Zipper",
-        "projectPath": "C:\\Users\\Valitov.GM\\source\\repos\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
-        "packagesPath": "C:\\Users\\Valitov.GM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Valitov.GM\\source\\repos\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\obj\\",
+        "projectPath": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+        "packagesPath": "C:\\Users\\gv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Valitov.GM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
