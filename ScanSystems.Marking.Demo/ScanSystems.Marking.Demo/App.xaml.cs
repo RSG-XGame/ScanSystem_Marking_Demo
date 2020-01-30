@@ -17,7 +17,7 @@ namespace ScanSystems.Marking.Demo
             MainViewModel viewModel = new MainViewModel { Navigation = mainView.Navigation };
             mainView.BindingContext = viewModel;
 
-            MainPage = mainView;
+            MainPage = new NavigationPage(mainView);
         }
 
         protected override void OnStart()

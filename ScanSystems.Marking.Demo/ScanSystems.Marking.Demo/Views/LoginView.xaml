@@ -8,7 +8,7 @@
              x:Class="ScanSystems.Marking.Demo.Views.LoginView">
     <ContentPage.Content>
         <RelativeLayout>
-            <Image Source="C:\Users\Valitov.GM\Downloads\Bardcode_Scanner.png" 
+            <!--<Image Source="{local:ImageResource ScanSystems.Marking.Demo.Resources.Images.Barcode_Scanner.png}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,
                         Property=Width}"
@@ -19,7 +19,7 @@
                     RelativeLayout.YConstraint="{ConstraintExpression
                         Type=RelativeToParent,
                         Property=Height,
-                        Factor=0.1}"/>
+                        Factor=0.1}"/>-->
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression
                          Type=RelativeToParent,
                          Property=Height,

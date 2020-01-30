@@ -38,6 +38,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+
             string[] codes = GetCodes();
 
             Product product = null;

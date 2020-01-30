@@ -73,13 +73,10 @@ namespace ScanSystems.Marking.Demo.ViewModels
             using (ScanSystemsContext db = new ScanSystemsContext())
             {
                 var user = db.Users.FirstOrDefault(x => x.DeviceSerialNumber == GetDeviceId());
-                if (user!= null && user.LastSignIn.AddDays(1) >= DateTime.Now)
+                if (user != null && user.LastSignIn.AddDays(1) >= DateTime.Now)
                 {
                     user.DeviceSerialNumber = null;
                     db.Entry(user).State = EntityState.Modified;
-                }
-                else
-                {
                     signedIn = true;
                 }
                 db.SaveChanges();
@@ -150,7 +147,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
                     userId = user.Id;
                     Login = "";
                     Password = "";
-                    Navigation.PopToRootAsync();
+                    Navigation.RemovePage(Navigation.PopAsync().Result);
                     Navigation.PushAsync(new MenuView { BindingContext = this }, animated);
                 }
             }
@@ -169,11 +166,11 @@ namespace ScanSystems.Marking.Demo.ViewModels
                         db.SaveChanges();
                     }
                     userId = null;
-                    Navigation.PopToRootAsync();
-                    Navigation.PushAsync(new LoginView { BindingContext = this }, animated);
                 }
             }
             userId = null;
+            Navigation.PopToRootAsync();
+            Navigation.PushAsync(new LoginView { BindingContext = this }, animated);
         }
 
         private string GetDeviceId()

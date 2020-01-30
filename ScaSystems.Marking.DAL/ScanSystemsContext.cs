@@ -45,10 +45,10 @@ namespace ScanSystems.Marking.DAL
 
             User user = new User { Id = Guid.NewGuid(), Password = "admin", Login = "admin", Name = "Администратор", LastSignIn = DateTime.Now, DeviceSerialNumber = "" };
 
-            CodeType product = new CodeType { Id = 1, Name = "Продукт", ChildrenCodeTypeId = null, MaxCountChildrens = 0, DMCodeStateId = 2, MapCode = "[1]", Selectable = true };
-            CodeType productInBox = new CodeType { Id = 2, Name = "Продукт в коробке", ChildrenCodeTypeId = 1, MaxCountChildrens = 3, DMCodeStateId = 3, MapCode = "[1][2];[2]", Selectable = true };
-            CodeType boxOnPallet = new CodeType { Id = 3, Name = "Коробка на паллете", ChildrenCodeTypeId = 2, MaxCountChildrens = 2, DMCodeStateId = 4, MapCode = "[1][2][4];[2][3];[3]", Selectable = true };
-            CodeType productOnPallet = new CodeType { Id = 4, Name = "Продукт на паллете", ChildrenCodeTypeId = 1, MaxCountChildrens = 4, DMCodeStateId = 4, MapCode = "[1][4];[4]", Selectable = false };
+            CodeType product = new CodeType { Id = 1, Name = "Продукт", ChildrenCodeTypeId = null, MaxCountChildrens = 0, DMCodeStateId = 2, MapCode = "[1]", SelectableFor = "" };
+            CodeType productInBox = new CodeType { Id = 2, Name = "Продукт в коробке", ChildrenCodeTypeId = 1, MaxCountChildrens = 3, DMCodeStateId = 3, MapCode = "[2];[1][2]", SelectableFor = "[1]" };
+            CodeType boxOnPallet = new CodeType { Id = 3, Name = "Коробка на паллете", ChildrenCodeTypeId = 2, MaxCountChildrens = 2, DMCodeStateId = 4, MapCode = "[3];[1][2][3];[2][3]", SelectableFor = "[1];[2]" };
+            CodeType productOnPallet = new CodeType { Id = 4, Name = "Продукт на паллете", ChildrenCodeTypeId = 1, MaxCountChildrens = 4, DMCodeStateId = 4, MapCode = "[4];[1][4];[1][3]", SelectableFor = "" };
 
             modelBuilder.Entity<DMCodeState>().HasData(dmStateFree, dmStateProduct, dmStateBox, dmStatePallet, dmStateDefected);
             modelBuilder.Entity<DMCode>().HasData(dmCodes);

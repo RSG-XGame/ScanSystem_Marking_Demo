@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ScanSystems.Marking.Demo;assembly=ScanSystems.Marking.Demo"
              mc:Ignorable="d"
              x:Class="ScanSystems.Marking.Demo.Views.MenuView">
     <ContentPage.Content>
         <RelativeLayout VerticalOptions="Fill" HorizontalOptions="Fill">
-            <Image Source="C:\Users\Valitov.GM\Downloads\Bardcode_Scanner.png" 
+           <!-- <Image Source="{local:ImageResource ScanSystems.Marking.Demo.Resources.Images.Barcode_Scanner.png}" 
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent,
                         Property=Width}"
@@ -18,7 +19,7 @@
                     RelativeLayout.YConstraint="{ConstraintExpression
                         Type=RelativeToParent,
                         Property=Height,
-                        Factor=0.1}"/>
+                        Factor=0.1}"/>-->
             <StackLayout 
                     RelativeLayout.YConstraint="{ConstraintExpression
                         Type=RelativeToParent,

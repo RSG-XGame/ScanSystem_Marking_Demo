@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using ZXing;
+using ZXing.Mobile;
 
 namespace ScanSystems.Marking.Demo.ViewModels
 {
@@ -48,6 +51,13 @@ namespace ScanSystems.Marking.Demo.ViewModels
 
             Navigation.NavigationStack[Navigation.NavigationStack.Count - 1].DisplayAlert(title, message, accept, cancel);
         }
+        protected async Task ShowMessageAsync(string title, string message)
+        {
+            string accept = "ОК";
+            string cancel = string.Empty;
+
+            await Navigation.NavigationStack[Navigation.NavigationStack.Count - 1].DisplayAlert(title, message, accept, cancel);
+        }
         protected void CloseModal()
         {
             Navigation.PopModalAsync(animated);
@@ -64,6 +74,19 @@ namespace ScanSystems.Marking.Demo.ViewModels
                 postAction?.Invoke(source);
             }
             return result;
+        }
+        protected void PropertyUpdated([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        protected async Task<Result> Scanning(BarcodeFormat barcodeFormat)
+        {
+            var options = new MobileBarcodeScanningOptions();
+            options.PossibleFormats = new List<ZXing.BarcodeFormat>() { barcodeFormat };
+
+            var scanner = new MobileBarcodeScanner();
+            return await scanner.Scan(options);
         }
 
         protected virtual void Initialization()

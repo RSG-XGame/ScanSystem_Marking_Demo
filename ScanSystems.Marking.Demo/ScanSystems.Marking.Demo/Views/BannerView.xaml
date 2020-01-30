@@ -4,12 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ScanSystems.Marking.Demo.Views.BannerView">
+             x:Class="ScanSystems.Marking.Demo.Views.BannerView"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand EventName="Appearing" Command="{Binding ShownCommand}" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
 </ContentPage>

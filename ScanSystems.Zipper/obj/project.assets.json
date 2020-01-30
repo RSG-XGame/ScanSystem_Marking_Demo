@@ -179,23 +179,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gv\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Valitov.GM\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+      "projectUniqueName": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
       "projectName": "ScanSystems.Zipper",
-      "projectPath": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
-      "packagesPath": "C:\\Users\\gv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gv\\Source\\Repos\\RSG-XGame\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\obj\\",
+      "projectPath": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+      "packagesPath": "C:\\Users\\Valitov.GM\\.nuget\\packages\\",
+      "outputPath": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Valitov.GM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
