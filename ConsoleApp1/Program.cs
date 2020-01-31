@@ -50,7 +50,7 @@ namespace ConsoleApp1
             }
 
             Registrator reg = new Registrator();
-            reg.Initialize(new CodeType() { Id = 3 }, product);
+            //reg.Initialize(new CodeType() { Id = 3 }, product);
             
 
             foreach (var dm in codes)

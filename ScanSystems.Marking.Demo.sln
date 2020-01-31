@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestZipper", "TestZipper", "{485D1A27-5963-4B91-B94A-98246DA69C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystems.Zipper", "ScanSystems.Zipper\ScanSystems.Zipper.csproj", "{3863ED9A-6A1E-401F-94AC-A9738E01149D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Zipper", "ScanSystems.Zipper\ScanSystems.Zipper.csproj", "{3863ED9A-6A1E-401F-94AC-A9738E01149D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C4D4EC36-7C72-4C75-8412-6743E5838EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

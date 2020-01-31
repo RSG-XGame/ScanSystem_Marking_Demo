@@ -14,10 +14,13 @@ namespace ScanSystems.Marking.Demo
             InitializeComponent();
 
             BannerView mainView = new BannerView();
-            MainViewModel viewModel = new MainViewModel { Navigation = mainView.Navigation };
+            MainViewModel viewModel = new MainViewModel();
             mainView.BindingContext = viewModel;
 
-            MainPage = new NavigationPage(mainView);
+            NavigationPage page = new NavigationPage(mainView);
+            viewModel.Navigation = page.Navigation;
+
+            MainPage = page;
         }
 
         protected override void OnStart()
