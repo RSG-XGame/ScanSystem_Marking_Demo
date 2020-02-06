@@ -5,9 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ScanSystems.Marking.Demo.Views.BannerView"
-             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors">
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             xmlns:local="clr-namespace:ScanSystems.Marking.Demo;assembly=ScanSystems.Marking.Demo">
     <ContentPage.Content>
         <StackLayout>
+            <Image Source="{local:ImageResource ScanSystems.Marking.Demo.Resources.Images.Barcode_Scanner.png}" />
         </StackLayout>
     </ContentPage.Content>
     <b:Interaction.Behaviors>

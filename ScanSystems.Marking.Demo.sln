@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScanSystems.Zipper", "ScanS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C4D4EC36-7C72-4C75-8412-6743E5838EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanSystem.Service", "ScanSystem.Service\ScanSystem.Service.csproj", "{DB012C8E-D08B-4482-AC4E-75F2826C3208}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,12 +55,17 @@ Global
 		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3863ED9A-6A1E-401F-94AC-A9738E01149D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB012C8E-D08B-4482-AC4E-75F2826C3208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB012C8E-D08B-4482-AC4E-75F2826C3208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB012C8E-D08B-4482-AC4E-75F2826C3208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB012C8E-D08B-4482-AC4E-75F2826C3208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3863ED9A-6A1E-401F-94AC-A9738E01149D} = {485D1A27-5963-4B91-B94A-98246DA69C30}
+		{DB012C8E-D08B-4482-AC4E-75F2826C3208} = {C4D4EC36-7C72-4C75-8412-6743E5838EBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EE78AC6-B16C-41D5-8772-D490691B36D2}

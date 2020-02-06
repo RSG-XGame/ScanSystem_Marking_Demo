@@ -75,7 +75,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
                 var user = db.Users.FirstOrDefault(x => x.DeviceSerialNumber == GetDeviceId());
                 if (user != null)
                 {
-                    if (user.LastSignIn.AddDays(1) >= DateTime.Now)
+                    if (user.LastSignIn.AddDays(1) < DateTime.Now)
                     {
                         user.DeviceSerialNumber = null;
                     }
@@ -91,20 +91,24 @@ namespace ScanSystems.Marking.Demo.ViewModels
 
             if (signedIn)
             {
+                Navigation.PopToRootAsync();
                 Navigation.PushAsync(new MenuView { BindingContext = this }, animated);
             }
             else
             {
+                Navigation.PopToRootAsync();
                 Navigation.PushAsync(new LoginView { BindingContext = this }, animated);
             }
         }
 
         private void ScanMode()
         {
+            Navigation.PopToRootAsync();
             Navigation.PushAsync(new ScanModeView { BindingContext = new ScanModeViewModel { Navigation = Navigation } }, animated);
         }
         private void Data()
         {
+            Navigation.PopToRootAsync();
             Navigation.PushAsync(new DataView { BindingContext = new DataViewModel { Navigation = Navigation } }, animated);
         }
         private void Settings()

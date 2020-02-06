@@ -21,7 +21,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
         public ObservableCollection<ScanModeModel> OptionalCodeTypes { get; private set; }
 
         public CodeType SelectedMainCodeType { get => selectedMainCodeType; set => SetProperty(ref selectedMainCodeType, value, postAction: SelectedMainCodeType_Changed); }
-        public string ProductName { get => product?.Name; }
+        public string ProductName { get => product?.Name ?? string.Empty; }
         public bool NeedScanProduct => !SelectedMainCodeType?.ChildrenCodeTypeId.HasValue ?? false;
 
         public ICommand ScanCommand { get; private set; }

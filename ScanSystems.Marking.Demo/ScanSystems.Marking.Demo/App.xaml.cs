@@ -17,7 +17,8 @@ namespace ScanSystems.Marking.Demo
             MainViewModel viewModel = new MainViewModel();
             mainView.BindingContext = viewModel;
 
-            NavigationPage page = new NavigationPage(mainView);
+            NavigationPage page = new NavigationPage();
+            page.PushAsync(mainView, true);
             viewModel.Navigation = page.Navigation;
 
             MainPage = page;

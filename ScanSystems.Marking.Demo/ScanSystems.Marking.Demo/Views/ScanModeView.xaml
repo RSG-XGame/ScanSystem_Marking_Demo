@@ -19,7 +19,7 @@
                 </Grid.RowDefinitions>
 
                 <Label VerticalOptions="Start" Text="Установите параметры работы" Grid.Row="0" />
-                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="{Binding MainCodeTypes}" VerticalOptions="Start" Grid.Row="1" />
+                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="{Binding MainCodeTypes}" ItemDisplayBinding="{Binding Name}" VerticalOptions="Start" Grid.Row="1" />
                 
                 <Grid Grid.Row="2">
                     <Label Text="Продукт:" Grid.Row="0" Grid.Column="0" />
@@ -39,9 +39,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
+
                 <Button Text="Начать" Grid.Row="4" Command="{Binding ScanCommand}" />
-                <Button Text="Назад" Grid.Row="5" Command="{Binding BackCommand}" />
+                <Button Text="Назад" Grid.Row="5" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>
