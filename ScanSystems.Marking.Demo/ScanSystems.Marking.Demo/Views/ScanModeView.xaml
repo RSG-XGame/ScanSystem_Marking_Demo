@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:models="clr-namespace:ScanSystems.Marking.Demo.Models"
+             xmlns:local="clr-namespace:ScanSystems.Marking.Demo.ViewModels"
              mc:Ignorable="d"
              x:Class="ScanSystems.Marking.Demo.Views.ScanModeView">
     <ContentPage.Content>
@@ -19,7 +20,8 @@
                 </Grid.RowDefinitions>
 
                 <Label VerticalOptions="Start" Text="Установите параметры работы" Grid.Row="0" />
-                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="{Binding MainCodeTypes}" ItemDisplayBinding="{Binding Name}" VerticalOptions="Start" Grid.Row="1" />
+                <Picker SelectedItem="{Binding SelectedMainCodeType}" ItemsSource="{Binding MainCodeTypes}" 
+                         VerticalOptions="Start" Grid.Row="1" />
                 
                 <Grid Grid.Row="2">
                     <Label Text="Продукт:" Grid.Row="0" Grid.Column="0" />

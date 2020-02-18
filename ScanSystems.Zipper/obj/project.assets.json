@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+      "projectUniqueName": "C:\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
       "projectName": "ScanSystems.Zipper",
-      "projectPath": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
+      "projectPath": "C:\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\ScanSystems.Zipper.csproj",
       "packagesPath": "C:\\Users\\Valitov.GM\\.nuget\\packages\\",
-      "outputPath": "C:\\ScanSystems.Marking.Demo\\ScanSystems.Zipper\\obj\\",
+      "outputPath": "C:\\ScanSystem_Marking_Demo\\ScanSystems.Zipper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

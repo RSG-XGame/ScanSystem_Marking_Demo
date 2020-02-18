@@ -14,7 +14,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private bool initialized = false;
+        private readonly bool initialized = false;
         private string login;
         private string password;
         private Guid? userId;

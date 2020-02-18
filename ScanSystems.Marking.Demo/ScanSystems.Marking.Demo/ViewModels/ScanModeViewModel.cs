@@ -16,6 +16,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
     {
         private CodeType selectedMainCodeType;
         private Product product;
+        private int selectedMainCodeTypeIndex;
 
         public ObservableCollection<CodeType> MainCodeTypes { get; private set; }
         public ObservableCollection<ScanModeModel> OptionalCodeTypes { get; private set; }
@@ -45,6 +46,7 @@ namespace ScanSystems.Marking.Demo.ViewModels
 
             if (MainCodeTypes.Count > 0)
             {
+                //SelectedMainCodeTypeIndex = 0;
                 SelectedMainCodeType = MainCodeTypes.First();
             }
 

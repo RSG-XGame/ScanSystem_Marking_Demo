@@ -7,7 +7,7 @@ namespace ScanSystems.Marking.DAL
 {
     public class ScanSystemsContext : DbContext
     {
-        private string databasePath;
+        private readonly string databasePath;
 
         public DbSet<DMCode> DMCodes {get;set;}
         public DbSet<DMCodeState> DMCodeStates {get;set;}
